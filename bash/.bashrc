@@ -1,10 +1,8 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) for
+# examples
 
 
-
-USER=zzrrf
 
 
 # If not running interactively, don't do anything
@@ -14,9 +12,8 @@ case $- in
 esac
 
 
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
+# don't put duplicate lines or lines starting with space in the history. See
+# bash(1) for more options
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
@@ -26,12 +23,12 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+# check the window size after each command and, if necessary, update the values
+# of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
+# If set, the pattern "**" used in a pathname expansion context will match all
+# files and zero or more directories and subdirectories.
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -54,9 +51,9 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
+    # We have color support; assume it's compliant with Ecma-48 (ISO/IEC-6429).
+    # (Lack of such support is extremely rare, and such a case would tend to
+    # support setf rather than setaf.)
 	color_prompt=yes
     else
 	color_prompt=
@@ -112,9 +109,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+# enable programmable completion features (you don't need to enable this, if
+# it's already enabled in /etc/bash.bashrc and /etc/profile sources
+# /etc/bash.bashrc).
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -122,48 +119,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
-
-
-
-
-
-
-export PATH="$PATH:$HOME/.local/bin"
-
-export PATH="$PATH:/home/zzrrf/pruebas/sequoia/target/debug/"
-
-
-
-# Variables de entorno para CS50
-CC="clang"
-CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
-LDLIBS="-lcrypt -lcs50 -lm"
-
-# Mis scripts
-export PATH="$PATH:/home/${USER}/scripts"
-
-
-
-
-
-
-
-
-# export DENO_INSTALL="/home/zzrrf/.deno"
-# export PATH="$DENO_INSTALL/bin:$PATH"
-
-
-
-export PATH="${HOME}/.nix-profile/bin:$PATH"
-
-
-eval "$(starship init bash)"
-
-export NIXPKGS_ALLOW_UNFREE=1
-
-export PATH="$PATH:/home/zzrrf/.cargo/bin"
 
 
 
