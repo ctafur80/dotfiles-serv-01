@@ -9,6 +9,7 @@ sería:
 - `git`
 - `stow`
 - `bash-completion`
+- `neovim`
 
 El gestor de paquetes con el que lo instalo es APT.
 
