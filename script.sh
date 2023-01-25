@@ -63,24 +63,3 @@ cd ~
 
 
 
-# TODO Eliminar este script y demás archivos que no sirvan.
-rm readme.md
-rm script.sh
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
