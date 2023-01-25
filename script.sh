@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-# Script for installing and setting the required software for my servers.
+# Script for installing and setting the required software (packages) for my
+# servers.
+#
+# The only prerrequisite is the CLI tool `git` first since you must clone this
+# dir from a GitHub repo.
 
 
 
@@ -29,7 +33,6 @@ done
 sudo apt-get update
 
 
-
 # Installing packages
 paq_list=""
 for paq in ${!PACKAGES[@]} ; do
@@ -37,7 +40,6 @@ for paq in ${!PACKAGES[@]} ; do
 done
 sudo apt-get install -y $paq_list
 sudo apt-get -y upgrade
-
 
 
 # Setting software with GNU Stow
@@ -51,7 +53,7 @@ done
 cd ~
 
 
-
+# ...
 
 
 
