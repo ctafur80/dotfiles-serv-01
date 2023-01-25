@@ -45,8 +45,14 @@ sudo apt-get -y upgrade
 # Setting software with GNU Stow
 for i in ${!PACKAGES[@]} ; do
     if [[ "$i" -eq "stow" ]] ; then
-        cd dotfiles
+        if [[ ! -d "~/dotfiles" ]] ; then
+            mkdir ~/dotfiles
+        fi
+        cp -r dotfiles ~/dotfiles
+
+        cd ~/dotfiles
         sudo stow */
+        cd -
     fi
 done
 
