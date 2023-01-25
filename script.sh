@@ -4,7 +4,7 @@
 # servers.
 #
 # The only prerrequisite is the CLI tool `git` first since you must clone this
-# dir from a GitHub repo.
+# dir from the GitHub repo <https://github.com/ctafur80/dotfiles-serv-01>.
 
 
 

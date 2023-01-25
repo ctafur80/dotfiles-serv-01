@@ -1,17 +1,12 @@
 
-Gestión de _dotfiles_ mediante GNU Stow. Los sistemas a los que hago aquí
-referencia es a servidores de Linux; concretamente, la distribución Ubuntu de
-servidor.
 
-El _software_ inicial para tener una máquina preparada con mis configuraciones
-sería:
 
-- `git`
-- `stow`
-- `bash-completion`
-- `neovim`
+Dotfiles management for my servers with GNU Stow. These servers are Ubuntu
+Linux. So it's based on APT package manager.
 
-El gestor de paquetes con el que lo instalo es APT.
+The initial software in order you need to proceed and copy this settings is the
+`git` CLI. Then you must copy or clone this repo
+(<https://github.com/ctafur80/dotfiles-serv-01>) and run the _script.sh_.
 
 
 
