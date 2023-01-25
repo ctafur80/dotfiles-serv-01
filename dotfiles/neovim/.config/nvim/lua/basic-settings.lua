@@ -1,7 +1,7 @@
 
 
 -- vim.opt.termguicolors = false
-pcall(vim.cmd, "colorscheme habamax")
+pcall(vim.cmd, "colorscheme minicyan")
 
 vim.opt.number = false
 
